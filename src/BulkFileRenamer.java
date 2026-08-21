@@ -36,6 +36,13 @@ public class BulkFileRenamer extends JFrame {
     // strip characters
     private final JSpinner removeFirstSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 999, 1));
     private final JSpinner removeLastSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 999, 1));
+
+    // case
+    private final JComboBox<String> caseBox = new JComboBox<>(new String[]{"Leave as=is", "UPPERCASE", "lowercase", "Title Case", "Sentence case"});
+    
+    // prefix & suffix
+    private final JTextField prefixField = new JTextField();
+    private final JTextField suffixField = new JTextField();
     
 
     public static void main(String[] args) {
