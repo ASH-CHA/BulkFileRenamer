@@ -44,6 +44,14 @@ public class BulkFileRenamer extends JFrame {
     // prefix & suffix
     private final JTextField prefixField = new JTextField();
     private final JTextField suffixField = new JTextField();
+
+    // numbering
+    private final JCheckBox numberingBox = new JCheckBox("Add sequence number");
+    private final JComboBox<String> numberPosBox = new JComboBox<>(new String[]{"Prefix (before name)", "Suffix (after name)"});
+    private final JSpinner numberStartSpinner = new JSpinner(new SpinnerNumberModel(1, 0, 999999, 1));
+    private final JSpinner numberStepSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 999999, 1));
+    private final JSpinner numberPadSpinner = new JSpinner(new SpinnerNumberModel(2, 1, 10, 1));
+    private final JTextField numberSepField = new JTextField("_");
     
 
     public static void main(String[] args) {
