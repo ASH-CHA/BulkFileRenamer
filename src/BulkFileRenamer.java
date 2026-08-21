@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
 
 public class BulkFileRenamer extends JFrame {
 
@@ -24,6 +26,17 @@ public class BulkFileRenamer extends JFrame {
     // filter
     private final JTextField filterField = new JTextField();
     private final JCheckBox includeFoldersBox = new JCheckBox("Include subfolders' files? no", false);
+
+    // find & replace
+    private final JTextField findField = new JTextField();
+    private final JTextField replaceField = new JTextField();
+    private final JCheckBox regexBox = new JCheckBox("Use regex");
+    private final JCheckBox matchCaseBox = new JCheckBox("Match case");
+
+    // strip characters
+    private final JSpinner removeFirstSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 999, 1));
+    private final JSpinner removeLastSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 999, 1));
+    
 
     public static void main(String[] args) {
         
